@@ -64,16 +64,22 @@ PRODUCT_PACKAGES += \
     sensors.mahimahi \
     camera.qsd8k
 
-# Prebuilt files/configs
+# Ramdisk
 PRODUCT_COPY_FILES += \
     device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc \
     device/htc/passion/init.mahimahi.usb.rc:root/init.mahimahi.usb.rc \
-    device/htc/passion/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc \
+    device/htc/passion/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc
+
+# Prebuilt files/configs
+PRODUCT_COPY_FILES += \
+    device/htc/passion/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/passion/h2w_headset.kcm:system/usr/keychars/h2w_headset.kcm \
     device/htc/passion/mahimahi-keypad.kl:system/usr/keylayout/mahimahi-keypad.kl \
     device/htc/passion/mahimahi-keypad.kcm:system/usr/keychars/mahimahi-keypad.kcm \
-    device/htc/passion/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/passion/mahimahi-nav.idc:system/usr/idc/mahimahi-nav.idc \
     device/htc/passion/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
+    device/htc/passion/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl \
+    device/htc/passion/synaptics-rmi-touchscreen.kcm:system/usr/keychars/synaptics-rmi-touchscreen.kcm \
     device/htc/passion/vold.fstab:system/etc/vold.fstab \
     device/htc/passion/sysctl.conf:system/etc/sysctl.conf
 
