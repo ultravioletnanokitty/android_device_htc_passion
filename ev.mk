@@ -27,9 +27,9 @@ PRIVATE_BUILD_DESC="passion-user 2.3.6 GRK39F 189904 release-keys"
 #
 PRODUCT_CODENAME := Perdo
 ifeq ($(MINISKIRT),true)
-PRODUCT_VERSION_DEVICE_SPECIFIC := a4-StockHBoot
+PRODUCT_VERSION_DEVICE_SPECIFIC := a5-StockHBoot
 else
-PRODUCT_VERSION_DEVICE_SPECIFIC := a4
+PRODUCT_VERSION_DEVICE_SPECIFIC := a5
 endif
 
 PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank you for choosing Evervolv for your Google Nexus One\nPlease visit us at \#evervolv on irc.freenode.net\nFollow @preludedrew for the latest Evervolv updates\nGet the latest rom at evervolv.com\n------------------------------------------------\n"
