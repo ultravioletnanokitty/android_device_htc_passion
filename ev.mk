@@ -18,18 +18,16 @@ PRODUCT_BRAND   := google
 PRODUCT_DEVICE  := passion
 PRODUCT_MODEL   := Nexus One
 PRODUCT_MANUFACTURER := HTC
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=passion \
-BUILD_FINGERPRINT=google/passion/passion:2.3.6/GRK39F/189904:user/release-keys \
-PRIVATE_BUILD_DESC="passion-user 2.3.6 GRK39F 189904 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=passion BUILD_FINGERPRINT=google/passion/passion:2.3.6/GRK39F/189904:user/release-keys PRIVATE_BUILD_DESC="passion-user 2.3.6 GRK39F 189904 release-keys"
 
 #
 # Set up the product codename, build version & MOTD.
 #
 PRODUCT_CODENAME := Perdo
 ifeq ($(MINISKIRT),true)
-PRODUCT_VERSION_DEVICE_SPECIFIC := a5-StockHBoot
+PRODUCT_VERSION_DEVICE_SPECIFIC := a6-StockHBoot
 else
-PRODUCT_VERSION_DEVICE_SPECIFIC := a5
+PRODUCT_VERSION_DEVICE_SPECIFIC := a6
 endif
 
 PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank you for choosing Evervolv for your Google Nexus One\nPlease visit us at \#evervolv on irc.freenode.net\nFollow @preludedrew for the latest Evervolv updates\nGet the latest rom at evervolv.com\n------------------------------------------------\n"
@@ -40,10 +38,11 @@ PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank yo
 PRODUCT_PACKAGES += \
     Camera
 
-# Nexus One ICS Boot Animation
+# Copy compatible bootanimation
 ifneq ($(MINISKIRT),true)
 PRODUCT_COPY_FILES += \
-    device/htc/passion/extras/bootanimation_passion_ics.zip:system/media/bootanimation.zip
+    vendor/ev/prebuilt/hvga/media/bootanimation.zip:system/media/bootanimation.zip
+#    device/htc/passion/extras/bootanimation_passion_ics.zip:system/media/bootanimation.zip
 endif
 
 # Hot reboot
