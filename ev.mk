@@ -41,7 +41,7 @@ PRODUCT_PACKAGES += \
 # Copy compatible bootanimation
 ifneq ($(MINISKIRT),true)
 PRODUCT_COPY_FILES += \
-    vendor/ev/prebuilt/hvga/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/ev/prebuilt/wvga/media/bootanimation.zip:system/media/bootanimation.zip
 #    device/htc/passion/extras/bootanimation_passion_ics.zip:system/media/bootanimation.zip
 endif
 
