@@ -104,14 +104,15 @@
         <item>0</item>
     </integer-array>
 
-    <!-- Component name of the default wallpaper. This will be ImageWallpaper if not
-         specified -->
-    <string name="default_wallpaper_component">@null</string>
-
     <integer name="config_deskDockKeepsScreenOn">0</integer>
     <integer name="config_carDockKeepsScreenOn">1</integer>
 
-    <!-- Default color for notification LED is white (new color is cyan) -->
+    <!-- enable screen saver feature -->
+    <bool name="config_enableDreams">false</bool>
+    <!-- Name of screensaver components to look for if none has been chosen by the user -->
+    <string name="config_defaultDreamComponent" translatable="false">com.google.android.deskclock/com.android.deskclock.Screensaver</string>
+
+    <!-- Default color for notification LED is is cyan -->
     <color name="config_defaultNotificationColor">#0099FF</color>
 
     <!-- Package name providing network location support. -->
