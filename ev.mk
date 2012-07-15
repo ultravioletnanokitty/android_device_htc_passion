@@ -44,3 +44,6 @@ PRODUCT_COPY_FILES += \
     vendor/ev/prebuilt/wvga/media/bootanimation.zip:system/media/bootanimation.zip
 #    device/htc/passion/extras/bootanimation_passion_ics.zip:system/media/bootanimation.zip
 endif
+
+# Hot reboot
+PRODUCT_PACKAGE_OVERLAYS += vendor/ev/overlay/hot_reboot
