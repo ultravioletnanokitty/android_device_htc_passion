@@ -83,12 +83,6 @@ PRODUCT_COPY_FILES += \
     device/htc/passion/vold.fstab:system/etc/vold.fstab \
     device/htc/passion/sysctl.conf:system/etc/sysctl.conf
 
-# Prebuilt Modules
-ifeq (,$(BUILD_KERNEL))
-PRODUCT_COPY_FILES += \
-    device/htc/passion/prebuilt/bcm4329.ko:system/lib/modules/bcm4329.ko
-endif
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
