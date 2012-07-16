@@ -51,30 +51,26 @@ BOARD_USE_NEW_LIBRIL_HTC := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
 BOARD_USE_LEGACY_TRACKPAD       := true
 
-# cat /proc/mtd #AOSP                   # cat /proc/mtd #CM7
-# dev:    size   erasesize  name        # dev:    size   erasesize  name
-# mtd0: 000e0000 00020000 "misc"        # mtd0: 000e0000 00020000 "misc"
-# mtd1: 00500000 00020000 "recovery"    # mtd1: 00400000 00020000 "recovery"
-# mtd2: 00280000 00020000 "boot"        # mtd2: 00380000 00020000 "boot"
-# mtd3: 07800000 00020000 "system"      # mtd3: 09100000 00020000 "system"
-# mtd4: 07800000 00020000 "cache"       # mtd4: 05f00000 00020000 "cache"
-# mtd5: 0c440000 00020000 "userdata"    # mtd5: 0c440000 00020000 "userdata"
-# mtd6: 00200000 00020000 "crashdata"
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00300000 #0x00380000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00400000
+# Boot:     0x00380000 3.5 MB (reduced to 3.0 #3.25)
+# Recovery: 0x00400000 4 MB
+BOARD_BOOTIMAGE_PARTITION_SIZE := 3145728 #3407872 #3670016
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 4194304
+BOARD_FLASH_BLOCK_SIZE := 131072
+ifeq ($(MINISKIRT),true)
+# Stock hboot has smaller system partition
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 150994944 #0x09000000 #0x08400000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 205783040 #0x0c440000
+else
+# Use larger system partiton
+# System   0x10400000 260 MB
+# Userdata 0x0a840000 168.25 MB
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 272629760
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 176422912
+endif
 
 ifeq ($(MINISKIRT),true)
 # Less fonts saves ~2mb
 SMALLER_FONT_FOOTPRINT := true
 # Less sounds (ringtones/notifications)
 MINIMAL_NEWWAVELABS := true
-# Stock hboot has smaller system partition
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 150994944 #0x09000000 #0x08400000
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 205783040 #0x0c440000
-else
-# Use larger system partiton
-BOARD_SYSTEMIMAGE_PARTITION_SIZE    := 220200960 # 230686720
-BOARD_USERDATAIMAGE_PARTITION_SIZE  := 228589568 # 209715200
 endif
-
-BOARD_FLASH_BLOCK_SIZE := 131072
