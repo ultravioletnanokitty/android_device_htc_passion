@@ -32,12 +32,6 @@ endif
 
 PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank you for choosing Evervolv for your Google Nexus One\nPlease visit us at \#evervolv on irc.freenode.net\nFollow @preludedrew for the latest Evervolv updates\nGet the latest rom at evervolv.com\n------------------------------------------------\n"
 
-#
-# Extra Packages
-#
-PRODUCT_PACKAGES += \
-    Camera
-
 # Copy compatible bootanimation
 ifneq ($(MINISKIRT),true)
 PRODUCT_COPY_FILES += \

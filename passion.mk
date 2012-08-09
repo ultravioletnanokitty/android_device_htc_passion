@@ -61,8 +61,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     gps.mahimahi \
     lights.mahimahi \
-    sensors.mahimahi \
-    camera.qsd8k
+    sensors.mahimahi
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
