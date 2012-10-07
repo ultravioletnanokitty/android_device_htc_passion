@@ -7,6 +7,8 @@ $(call inherit-product, device/htc/passion/full_passion.mk)
 ifeq ($(MINISKIRT),true)
 $(call inherit-product, vendor/ev/config/common_small_phone.mk)
 else
+# Pull all dictionaries
+TARGET_USE_KEYBOARD := international
 $(call inherit-product, vendor/ev/config/common_full_phone.mk)
 endif
 

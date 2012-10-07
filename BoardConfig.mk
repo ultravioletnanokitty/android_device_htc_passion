@@ -63,7 +63,4 @@ ifeq ($(MINISKIRT),true)
 SMALLER_FONT_FOOTPRINT := true
 # Less sounds (ringtones/notifications)
 MINIMAL_NEWWAVELABS := true
-else
-# Pull all dictionaries
-TARGET_USE_KEYBOARD := international
 endif
