@@ -7,8 +7,6 @@ $(call inherit-product, device/htc/passion/full_passion.mk)
 ifeq ($(MINISKIRT),true)
 $(call inherit-product, vendor/ev/config/common_small_phone.mk)
 else
-# Pull all dictionaries
-TARGET_USE_KEYBOARD := international
 $(call inherit-product, vendor/ev/config/common_full_phone.mk)
 endif
 
@@ -27,9 +25,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=passion BUILD_FINGERPRINT=google/pa
 #
 PRODUCT_CODENAME := Perdo
 ifeq ($(MINISKIRT),true)
-PRODUCT_VERSION_DEVICE_SPECIFIC := p4-StockHBoot
+PRODUCT_VERSION_DEVICE_SPECIFIC := p1-mini
 else
-PRODUCT_VERSION_DEVICE_SPECIFIC := p4
+PRODUCT_VERSION_DEVICE_SPECIFIC := p1
 endif
 
 PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank you for choosing Evervolv for your Google Nexus One\nPlease visit us at \#evervolv on irc.freenode.net\nFollow @preludedrew for the latest Evervolv updates\nGet the latest rom at evervolv.com\n------------------------------------------------\n"
@@ -38,7 +36,8 @@ PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank yo
 ifneq ($(MINISKIRT),true)
 PRODUCT_COPY_FILES += \
     vendor/ev/prebuilt/wvga/media/bootanimation.zip:system/media/bootanimation.zip
-#    device/htc/passion/extras/bootanimation_passion_ics.zip:system/media/bootanimation.zip
+# Pull all dictionaries
+TARGET_USE_KEYBOARD := international
 endif
 
 # Hot reboot
