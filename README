@@ -1,6 +1,1 @@
 Device configuration for Google Nexus One (passion)
-
-Jellybean requires a repartitioned hboot (provided in prebuilt/hboot)
-There is no way around this. Full build is ~200mb a small build is ~170mb
-For a small build:
-  define MINISKIRT=true on the command line (e.g. make MINISKIRT=true)
