@@ -2,4 +2,7 @@
 <resources>
     <!-- Whether or not to display the trackball settings -->
     <bool name="has_trackball">true</bool>
+    <!-- DPI resources -->
+    <string name="config_defaultDpi">240</string>
+    <string name="config_recommendedTabletDpi">160</string>
 </resources>
