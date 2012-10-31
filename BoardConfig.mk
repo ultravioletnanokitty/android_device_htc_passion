@@ -47,6 +47,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 3200
 # Hacks
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
 BOARD_USE_LEGACY_TRACKPAD       := true
+BOARD_USE_LEGACY_TOUCHSCREEN    := true
 
 # Boot:     0x00380000 3.5 MB (reduced to 3.0 #3.25)
 # Recovery: 0x00400000 4 MB
