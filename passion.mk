@@ -38,7 +38,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.disable.power.collapse=0 \
     rild.libpath=/system/lib/libhtc_ril.so \
     ro.telephony.call_ring.delay=2 \
-    ro.telephony.ril.v3=signalstrength,singlepdp \
+    ro.telephony.ril.v3=signalstrength,singlepdp,apptypesim \
     ro.telephony.default_network=0
 
 # Don't set /proc/sys/vm/dirty_ratio to 0 when USB mounting
