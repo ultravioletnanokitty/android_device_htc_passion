@@ -37,7 +37,7 @@ BOARD_KERNEL_CMDLINE    := no_console_suspend=1 wire.search_count=5
 BOARD_KERNEL_BASE       := 0x20000000
 BOARD_KERNEL_NEW_PPPOX  := true
 
-TARGET_KERNEL_CONFIG    := evervolv_mahimahi_defconfig
+TARGET_KERNEL_CONFIG    := evervolv_ubuntuphone_mahimahi_defconfig
 
 # GPS HAL and AMSS version
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mahimahi
