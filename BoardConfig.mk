@@ -38,7 +38,6 @@ BOARD_KERNEL_BASE       := 0x20000000
 BOARD_KERNEL_NEW_PPPOX  := true
 
 TARGET_KERNEL_CONFIG    := evervolv_mahimahi_defconfig
-TARGET_PREBUILT_KERNEL  := device/htc/passion/prebuilt/kernel
 
 # GPS HAL and AMSS version
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mahimahi
