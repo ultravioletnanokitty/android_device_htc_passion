@@ -67,6 +67,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc \
     device/htc/passion/init.mahimahi.usb.rc:root/init.mahimahi.usb.rc \
+    device/htc/passion/fstab.mahimahi:root/fstab.mahimahi \
     device/htc/passion/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc
 
 # Prebuilt files/configs
