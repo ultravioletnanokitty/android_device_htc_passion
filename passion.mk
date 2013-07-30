@@ -67,6 +67,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc \
     device/htc/passion/init.mahimahi.usb.rc:root/init.mahimahi.usb.rc \
+    device/htc/passion/fstab.mahimahi:root/fstab.mahimahi \
     device/htc/passion/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc
 
 # Prebuilt files/configs
@@ -79,7 +80,6 @@ PRODUCT_COPY_FILES += \
     device/htc/passion/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/passion/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl \
     device/htc/passion/synaptics-rmi-touchscreen.kcm:system/usr/keychars/synaptics-rmi-touchscreen.kcm \
-    device/htc/passion/vold.fstab:system/etc/vold.fstab \
     device/htc/passion/sysctl.conf:system/etc/sysctl.conf
 
 # Permissions
