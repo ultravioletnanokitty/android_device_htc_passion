@@ -165,4 +165,9 @@
          which typically is /data/data/com.android.providers.downloads/files -->
     <integer name="config_downloadDataDirSize">40</integer>
 
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">NexusOne</string>
+
+    <!-- MMS user agent prolfile url -->
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://www.htcmms.com.tw/Android/Common/nexusone/ua-profile.xml</string>
 </resources>
