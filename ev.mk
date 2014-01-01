@@ -4,7 +4,7 @@ $(call inherit-product, vendor/ev/config/gsm.mk)
 $(call inherit-product, device/htc/passion/full_passion.mk)
 
 # Inherit some common evervolv stuff.
-$(call inherit-product, $(SRC_EVERVOLV_DIR)/config/common_small_phone.mk)
+$(call inherit-product, $(SRC_EVERVOLV_DIR)/config/common_full_phone.mk)
 
 #
 # Setup device specific product configuration.
